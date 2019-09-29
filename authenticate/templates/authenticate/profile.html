@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div align="center">
+    <h1>{{ user }}</h1>
+
+    {% if user.is_authenticated %}
+
+    <p><img src="{{ user.profile.image.url }}", alt="profile", style="width: 200px; height: 200px;"></p>
+    <p>Name: {{ user.first_name }} {{ user.last_name }}</p>
+    <p>Username: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+
+
+</div>
+    {% endif %}
+
+{% endblock %}

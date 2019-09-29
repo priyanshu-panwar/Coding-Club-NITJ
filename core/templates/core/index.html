@@ -1,0 +1,394 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="about">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5 col-md-6">
+            <div class="about-img">
+              <img src="{% static 'img/dsc.svg' %}" alt="available">
+            </div>
+          </div>
+
+          <div class="col-lg-7 col-md-6">
+            <div class="about-content">
+              <h2>About Us</h2>
+              <h3>What is Developer Student Clubs?</h3>
+              <p>A Developer Students Club is a Google recogznied student body at a college which directly reports to Google for their activities and is supported by the tech giant. A DSC conducts workshops, seminars
+                and other fun activities which help the students connect with Google. And we give Google interview referrals too!</p>
+              <!-- <p>Aut dolor id. Sint aliquam consequatur ex ex labore. Et quis qui dolor nulla dolores neque. Aspernatur consectetur omnis numquam quaerat. Sed fugiat nisi. Officiis veniam molestiae. Et vel ut quidem alias veritatis repudiandae ut fugit. Est ut eligendi aspernatur nulla voluptates veniam iusto vel quisquam. Fugit ut maxime incidunt accusantium totam repellendus eum error. Et repudiandae eum iste qui et ut ab alias.</p> -->
+              <!-- <ul>
+                <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                <li><i class="ion-android-checkmark-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              </ul> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- #about -->
+
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services" class="section-bg" style="background-image: url("{% static 'img/s2.jpg' %}");">
+      <div class="container">
+
+        <header class="section-header" >
+          <h3><font color="white">What we do?</font></h3>
+          <p>Developer Student Club</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href=""><strong>Code</strong></a></h4>
+              <p class="description">We help you learn to code, and grow as a developer.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+              <h4 class="title"><a href="event.html"><strong>Events</strong></a></h4>
+              <p class="description">We teach you how to use different Google technologies to create your next big project!</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href=""><strong>Workshops</strong></a></h4>
+              <p class="description">Full-day of workshops, hands-on experience, hacking and debugging. Come and tame your favourite technology!</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+    <!--==========================
+      Why Us Section
+    ============================-->
+     <section id="why-us" class="wow fadeIn">
+      <div class="container-fluid">
+
+        <!-- <header class="section-header">
+          <h3>Why choose us?</h3>
+          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+        </header> -->
+
+        <!-- <div class="row">
+
+          <div class="col-lg-6">
+            <div class="why-us-img">
+              <img src="img/why-us.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="why-us-content">
+              <p>Molestiae omnis numquam corrupti omnis itaque. Voluptatum quidem impedit. Odio dolorum exercitationem est error omnis repudiandae ad dolorum sit.</p>
+              <p>
+                Explicabo repellendus quia labore. Non optio quo ea ut ratione et quaerat. Porro facilis deleniti porro consequatur
+                et temporibus. Labore est odio.
+
+                Odio omnis saepe qui. Veniam eaque ipsum. Ea quia voluptatum quis explicabo sed nihil repellat..
+              </p>
+
+              <div class="features wow bounceInUp clearfix">
+                <i class="fa fa-diamond" style="color: #f058dc;"></i>
+                <h4>Corporis dolorem</h4>
+                <p>Commodi quia voluptatum. Est cupiditate voluptas quaerat officiis ex alias dignissimos et ipsum. Soluta at enim modi ut incidunt dolor et.</p>
+              </div>
+
+              <div class="features wow bounceInUp clearfix">
+                <i class="fa fa-object-group" style="color: #ffb774;"></i>
+                <h4>Eum ut aspernatur</h4>
+                <p>Molestias eius rerum iusto voluptas et ab cupiditate aut enim. Assumenda animi occaecati. Quo dolore fuga quasi autem aliquid ipsum odit. Perferendis doloremque iure nulla aut.</p>
+              </div>
+
+              <div class="features wow bounceInUp clearfix">
+                <i class="fa fa-language" style="color: #589af1;"></i>
+                <h4>Voluptates dolores</h4>
+                <p>Voluptates nihil et quis omnis et eaque omnis sint aut. Ducimus dolorum aspernatur. Totam dolores ut enim ullam voluptas distinctio aut.</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div> -->
+
+      <div class="container">
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">20</span>
+            <p>Members</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">5</span>
+            <p>Projects</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">2</span>
+            <p>Events</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">2</span>
+            <p>Workshops</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="call-to-action" class="wow fadeInUp" style="background-image: url('img/gog.jpg');opacity:1.0;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title" style="opacity:1.0;">Join Us</h3>
+            <p class="cta-text" style="opacity:1.0;" ><strong>Google collaborates with university students who are passionate about growing developer communities and support them with starting student clubs on their campuses. DSC NITJ is the official Google recognized students' club at NITJ.</strong></p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="https://forms.gle/Qg6YrWFjfrm89upS9">Register Now</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #call-to-action -->
+
+    <!--==========================
+      Features Section
+    ============================-->
+    <section id="features">
+      <div class="container">
+
+        <div class="row feature-item">
+          <div class="col-lg-6 wow fadeInUp">
+            <br><br><br><br>
+            <img src="{% static 'img/DSCsummit.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
+            <h4>Formation of DSC Core Team and Committee at NITJ</h4>
+            <p>
+              Developer Student Club is an initiative where Google collaborates with passionate university students and provides them with the opportunity to grow their knowledge on developer technologies and gain relevant industry experience by solving the real world problems and showcase their prototypes and solutions to help solve those problems.
+            </p>
+            <p>
+              The Developer Student Club of NIT Jalandhar was formulated on 27th February 2019 at the Electronics and Communication department under the guidance of Dr Pawan Kumar Verma and Dr Sukwinder Singh.
+            </p>
+            <p>
+              The round 1 for the selection of interested candidates was based on tests under different domains such as the Internet of Things(IoT), Machine Learning(ML) etc. Then the shortlisted candidates were called for an interview which was structured according to their field of specialization. Dr Sukwinder Singh was the interviewer for the students under Machine Learning and Dr Pawan Kumar Verma was the interviewer for the students under the Internet of Things.
+            </p>
+          </div>
+        </div>
+
+        <div class="row feature-item mt-5 pt-5">
+          <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
+            <img src="{% static 'img/GDG.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+            <br>
+            <h4>Developer Student Clubs</h4>
+            <p>
+             Google collaborates with university students who are passionate about growing developer communities and supports them with
+             starting student clubs on their campuses. These DSCs provide students with the opportunity to: Grow their knowledge on
+             developer technologies and more through peer to peer workshops and events. Gain relevant industry experience by
+             solving problems for local organizations with technology based solutions. Showcase their prototypes and solutions
+             to their local community and industry leaders. Google Developers supports and recognizes DSCs, but does not own or manage them.
+           </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Portfolio Section
+    ============================-->
+    <section id="portfolio" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Gallery</h3>
+        </header>
+
+        <!-- <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div> -->
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/app1.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">App 1</a></h4>
+                <p>App</p>
+                <div>
+                  <a href="{% static 'img/portfolio/app1.jpg' %}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/web3.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Web 3</a></h4>
+                <p>Web</p>
+                <div>
+                  <a href="{% static 'img/portfolio/web3.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/app2.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">App 2</a></h4>
+                <p>App</p>
+                <div>
+                  <a href="{% static 'img/portfolio/app2.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/card2.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Card 2</a></h4>
+                <p>Card</p>
+                <div>
+                  <a href="{% static 'img/portfolio/card2.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/web2.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Web 2</a></h4>
+                <p>Web</p>
+                <div>
+                  <a href="{% static 'img/portfolio/web2.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/app3.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">App 3</a></h4>
+                <p>App</p>
+                <div>
+                  <a href="{% static 'img/portfolio/app3.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/card1.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Card 1</a></h4>
+                <p>Card</p>
+                <div>
+                  <a href="{% static 'img/portfolio/card1.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/card3.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Card 3</a></h4>
+                <p>Card</p>
+                <div>
+                  <a href="{% static 'img/portfolio/card3.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/web1.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Web 1</a></h4>
+                <p>Web</p>
+                <div>
+                  <a href="{% static 'img/portfolio/web1.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/gdg3.jpeg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Web 1</a></h4>
+                <p>Web</p>
+                <div>
+                  <a href="{% static 'img/portfolio/web1.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section><!-- #portfolio -->
+
+
+{% endblock %}

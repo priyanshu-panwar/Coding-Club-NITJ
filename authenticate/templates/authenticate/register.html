@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+{% block content %}
+
+<h1 class="text-center">Register</h1>
+<div align="center">
+    <h3 class="text-center">You can Register Through </h3>
+<a href="{% url 'social:begin' 'google-oauth2' %}"><img src="https://img.icons8.com/plasticine/50/000000/google-logo.png"></a>
+
+<a href="{% provider_login_url 'facebook' method='oauth2' %}"><img src="https://img.icons8.com/plasticine/60/000000/facebook-new.png"></a>
+
+<a href="{% provider_login_url 'instagram' method='oauth2' %}"><img src="https://img.icons8.com/doodle/60/000000/instagram--v3.png"></a>
+
+
+</div>
+<br>
+<div class="col-md-6 offset-md-3">
+    <form method="POST" action="{% url 'authenticate:register' %}">
+        {% csrf_token %}
+
+        {% if form.errors %}
+        <div class="alert alert-warning alert-dismissable" role="alert">
+                <button class="close" data-dismiss="alert">
+                  <small><sup>x</sup></small>
+                </button>
+                <p>Your Form has errors....</p>
+                {% for field in form %}
+                {% if field.errors %}
+                {{ field.errors }}
+                {% endif %}
+                {% endfor %}
+              </div>
+        {% endif %}
+
+        {{ form.as_p }}
+        <!-- we can use form or form.as_ul -->
+
+        <input type="submit" value="Register" class="btn btn-primary">
+    </form>
+    <br>
+</div>
+
+{% endblock %}
