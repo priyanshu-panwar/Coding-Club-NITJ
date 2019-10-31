@@ -34,6 +34,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'authenticate',
     'core',
+    'newsletter',
+    'blog',
 
     'social_django',
 
@@ -44,6 +46,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.instagram',
 
     'django.contrib.sites',
+
+    'crispy_forms',
 
     'django.contrib.admin',
     'django.contrib.auth',

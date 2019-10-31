@@ -1,6 +1,8 @@
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
 from django.contrib.auth.models import User
 from django import forms
+from .models import Profile, Branch, Languages
+
 
 class EditProfileForm(UserChangeForm):
 
@@ -74,3 +76,8 @@ class EditPasswordForm(PasswordChangeForm):
         self.fields['new_password2'].widget.attrs['placeholder'] = 'Confirm Password'
         self.fields['new_password2'].label = ""
         self.fields['new_password2'].help_text = '<span class="form-text text-muted"><small>Enter the same password as before, for verification.</small></span>'
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['branch', 'description', 'contact', 'preferred_language', 'image']

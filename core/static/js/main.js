@@ -26,16 +26,16 @@
   // Initiate the wowjs animation library
   new WOW().init();
 
-  // Header scroll class
+  //Header scroll class
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
+    if ($(this).scrollTop() > 5) {
       $('#header').addClass('header-scrolled');
     } else {
       $('#header').removeClass('header-scrolled');
     }
   });
 
-  if ($(window).scrollTop() > 100) {
+  if ($(window).scrollTop() > 5) {
     $('#header').addClass('header-scrolled');
   }
 

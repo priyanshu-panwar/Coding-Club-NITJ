@@ -2,8 +2,11 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
-from .forms import SignUpForm, EditProfileForm, EditPasswordForm
+from .forms import SignUpForm, EditProfileForm, EditPasswordForm, ProfileForm
 from django.contrib.auth.models import User
+from django.views.generic.edit import UpdateView
+from .models import Profile, Branch, Languages
+
 
 def profile(request):
     context = {'user': request.user}
@@ -53,7 +56,7 @@ def edit_profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, ('You have been Edited your profile!'))
-            return redirect('core:home')
+            return redirect('authenticate:home')
     else:
         form = EditProfileForm(instance=request.user)
 
@@ -74,5 +77,16 @@ def change_password(request):
     context = {'form': form}
     return render(request, 'authenticate/change_password.html', context)
 
+
 def profile_edit(request):
-    return render(request, 'authenticate/profile_edit.html')
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES, instance=request.user.profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, ('Your credentials have been saved!'))
+            return redirect('authenticate:home')
+    else:
+        form = ProfileForm(data=request.POST)
+
+    context = {'form': form}
+    return render(request, 'authenticate/profile_edit.html', context)
