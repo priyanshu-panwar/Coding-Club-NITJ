@@ -1,0 +1,34 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div class="container" style="padding-top: 150px;">
+  <article class="media content-section">
+    <div class="media-body">
+      <div class="article-metadata">
+        <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
+        
+      </div>
+      <h2 class="article-title">{{ object.title }}</h2>
+      <p class="article-content content-markdown">Valid till: {{ object.date_valid|date:"F d, Y" }}</p>
+    </div>
+
+  </article>
+    {% if user.is_authenticated %}
+    {% if validity %}
+      <h3>Submit Your Code</h3>
+      <form action="." method="POST">
+        {% csrf_token %}
+        {{ comment_form.as_p }}
+        <button class="btn btn-outline-info" type="submit">Submit Code</button>
+      </form>
+      {% else %}
+      <h6>The event is over.</h6>
+      {% endif %}
+
+    {% endif %}
+<h5>You can practice your code here before submitting:</h5>
+
+  <iframe src="https://trinket.io/embed/python/1950859fc7" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    
+<hr>
+{% endblock content %}

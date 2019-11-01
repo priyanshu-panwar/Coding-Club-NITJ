@@ -3,22 +3,20 @@
 {% block content %}
 <br>
 <div class="container" style="padding-top: 120px;">
-  <h5>Click on this button: <a href="{% url 'startup:post-create' %}" class="btn-get-started" style="background-color: #EA4335; padding: 5px;">Submit Idea <i class="fa fa-lightbulb-o" aria-hidden="true"></i></a></h5><br>
-  <h1>Recent Ideas Submitted</h1><hr>
+  <h1>Recent Events Ongoing</h1><hr>
   {% for post in posts %}
     <article class="media content-section">
       <div class="media-body">
         <div class="article-metadata">
-          <a class="mr-2" href="{% url 'startup:user-posts' post.author.username %}">{{ post.author }}</a>
           <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
         </div>
-        <h2><a class="article-title" href="{% url 'startup:post-detail' post.id %}">{{ post.title }}</a></h2>
-        <p class="article-content content-markdown">{{ post.content }}</p>
+        <h2><a class="article-title" href="{% url 'codearena:post-detail' post.id %}">{{ post.title }}</a></h2>
+        <p class="article-content content-markdown">Valid till: {{ post.date_valid|date:"F d, Y" }}</p>
       </div>
     </article>
     <hr>
     {% empty %}
-    <h3>No ideas have been submitted yet.</h3>
+    <h3>No Events yet.</h3>
   {% endfor %}
 
 {% if posts.has_other_pages %}

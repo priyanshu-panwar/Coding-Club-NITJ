@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'newsletter',
     'blog',
     'startup',
+    'codearena',
 
     'social_django',
     'pagedown.apps.PagedownConfig',

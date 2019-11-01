@@ -33,6 +33,7 @@ urlpatterns = [
     path('blog/', include('blog.urls', namespace='blog')),
     path('tag/(?P<slug>[\w-]+)/$', PostListView.as_view(), name='tagged'),
     path('startup/', include('startup.urls', namespace='startup')),
+    path('codearena/', include('codearena.urls', namespace='codearena')),
 
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('allauth.urls')),
