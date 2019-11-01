@@ -36,8 +36,11 @@ INSTALLED_APPS = [
     'core',
     'newsletter',
     'blog',
+    'startup',
 
     'social_django',
+    'pagedown.apps.PagedownConfig',
+    'taggit',
 
     'allauth',
     'allauth.account',
@@ -167,3 +170,5 @@ STATIC_URL = '/static/'
 django_heroku.settings(locals())
 
 SITE_ID=1
+
+LOGIN_URL = 'authenticate:login'

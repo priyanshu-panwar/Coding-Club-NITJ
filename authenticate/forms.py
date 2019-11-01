@@ -4,6 +4,20 @@ from django import forms
 from .models import Profile, Branch, Languages
 
 
+class UserUpdateForm(forms.ModelForm):
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ['username', 'email']
+
+
+class ProfileUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['branch', 'description', 'contact', 'preferred_language', 'image']
+
+'''
 class EditProfileForm(UserChangeForm):
 
     class Meta:
@@ -22,7 +36,7 @@ class EditProfileForm(UserChangeForm):
         self.fields['username'].label = ""
         self.fields['username'].placeholder = "Username"
         self.fields['username'].help_text = '<span class="form-text text-muted"><small>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</small></span>'
-        
+   '''     
 
 class SignUpForm(UserCreationForm):
     email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Email Address'}))
@@ -76,8 +90,9 @@ class EditPasswordForm(PasswordChangeForm):
         self.fields['new_password2'].widget.attrs['placeholder'] = 'Confirm Password'
         self.fields['new_password2'].label = ""
         self.fields['new_password2'].help_text = '<span class="form-text text-muted"><small>Enter the same password as before, for verification.</small></span>'
-
+'''
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['branch', 'description', 'contact', 'preferred_language', 'image']
+'''

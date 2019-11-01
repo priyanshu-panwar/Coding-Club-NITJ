@@ -8,8 +8,9 @@
 
 
 {% block content %}
-    <div class="content-section">
-        <form method="POST">
+    <div class="content-section container">
+        <div style="padding-top: 150px;">
+    <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Blog Post</legend>
@@ -26,4 +27,5 @@
             {% endfor %}
             </p>
     </div>
+</div>
 {% endblock content %}

@@ -37,7 +37,7 @@ def contact(request):
 			con.message = form.cleaned_data['message']
 			con.save()
 			context = {'form': ContactForm()}
-			return render(request, 'core/thanks.html', context)
+			return render(request, 'core/thanks2.html', context)
 	else:
 		form = ContactForm()
 

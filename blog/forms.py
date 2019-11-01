@@ -13,7 +13,7 @@ class CommentForm(forms.ModelForm):
 
 class PostForm(forms.ModelForm):
     title = forms.CharField()
-    content = forms.CharField(widget=PagedownWidget)
+    content = forms.CharField(widget=PagedownWidget())
     class Meta:
         model = Post
         fields = ('title', 'content', 'tags',)

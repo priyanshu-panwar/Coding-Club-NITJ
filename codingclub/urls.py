@@ -18,6 +18,9 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from blog.views import PostListView
+
+
 admin.site.site_header = "Coding Club NITJ"
 admin.site.site_title = "Coding Club NITJ Portal"
 admin.site.index_title = "Welcome to Coding Club NITJ Portal"
@@ -27,6 +30,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('authenticate.urls', namespace='authenticate')),
     path('', include('core.urls', namespace='core')),
+    path('blog/', include('blog.urls', namespace='blog')),
+    path('tag/(?P<slug>[\w-]+)/$', PostListView.as_view(), name='tagged'),
+    path('startup/', include('startup.urls', namespace='startup')),
 
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('allauth.urls')),

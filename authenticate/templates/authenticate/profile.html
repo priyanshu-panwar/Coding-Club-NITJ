@@ -1,20 +1,53 @@
 {% extends 'core/base.html' %}
 {% load static %}
-
+{% load crispy_forms_tags %}
 {% block content %}
-<br><br><br><br>
-<div align="center">
-    <h1>{{ user }}</h1>
 
-    {% if user.is_authenticated %}
-
-    <p><img src="{{ user.profile.image.url }}", alt="profile", style="width: 200px; height: 200px;"></p>
-    <p>Name: {{ user.first_name }} {{ user.last_name }}</p>
-    <p>Username: {{ user.username }}</p>
-    <p>Email: {{ user.email }}</p>
-
-
+<div class="container" style="padding-top: 150px;">
+<div class="row">
+  <div class="col-md-4">
+    <img class="rounded-circle account-img" style="width: 150px; height: 150px;" src="{{ user.profile.image.url }}">
+    <h2 class="account-heading">{{ user.username }}</h2>
+    <p class="text-secondary">{{ user.email }}</p>
+  </div>
+  <div class="col-md-8">
+    <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <fieldset class="form-group">
+              <legend class="border-bottom mb-4">Profile Info</legend>
+              {{ u_form|crispy }}
+              {{ p_form|crispy }}
+          </fieldset>
+          <div class="form-group">
+              <button class="btn btn-outline-info" type="submit">Update</button>
+          </div>
+    </form>
+  </div>
+  </div>
 </div>
-    {% endif %}
 
-{% endblock %}
+
+
+<!--    <div class="content-section container" style="padding-top: 150px;">
+      <div class="media">
+        <img class="rounded-circle account-img" style="width: 150px; height: 150px;" src="{{ user.profile.image.url }}">
+        <div class="media-body" style="padding-left: 50px;">
+          <h2 class="account-heading">{{ user.username }}</h2>
+          <p class="text-secondary">{{ user.email }}</p>
+        </div>
+      </div>
+      <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <fieldset class="form-group">
+              <legend class="border-bottom mb-4">Profile Info</legend>
+              {{ u_form|crispy }}
+              {{ p_form|crispy }}
+          </fieldset>
+          <div class="form-group">
+              <button class="btn btn-outline-info" type="submit">Update</button>
+          </div>
+      </form>
+    </div>
+-->
+
+{% endblock content %}

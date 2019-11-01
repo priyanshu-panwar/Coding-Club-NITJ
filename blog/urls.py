@@ -7,16 +7,13 @@ from .views import (
     PostUpdateView,
     #PostDeleteView,
     UserPostListView,
-    ArticleMonthArchiveView,
 )
 from . import views
 import re
 
 app_name = 'blog'
 urlpatterns = [
-    path('<int:year>/<str:month>/', ArticleMonthArchiveView.as_view(), name="archive_month"),
-    path('test/', views.test, name='test'),
-	path('', views.home, name='home'),
+    path('', views.home, name='home'),
     #path('', PostListView.as_view(), name='home'),
     path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),
     path('post/<int:pk>/', views.post_detail, name='post-detail'),

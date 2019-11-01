@@ -8,7 +8,7 @@ class Profile(models.Model):
 	description = models.TextField(null=True, blank=True)
 	contact = models.CharField(max_length=13, null=True, blank=True)
 	preferred_language = models.ForeignKey('Languages', null=True, blank=True, on_delete=models.CASCADE)
-	image = models.ImageField(upload_to='profile_pics', null=True, blank=True)
+	image = models.ImageField(upload_to='profile_pics', default='default.jpg', null=True, blank=True)
 
 	def __str__(self):
 		return self.user.username
