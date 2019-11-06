@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}<title>Vote - Polls</title>{% endblock %}
+{% block content %}
+<div class="container" style="padding-top: 150px;">
+<h1>{{ question.topic }}</h1>
+<h2>{{ question.question_text }}</h2>
+
+{% if error_message %} <p><strong>{{ error_message }}</strong></p> {% endif %}
+
+<form action = "{% url 'meeting:vote' question.id %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Hit">
+</form>
+</div>
+
+{% endblock %}

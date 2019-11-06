@@ -1,0 +1,112 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container" style="padding-top: 150px;">
+
+<h1>Team Members</h1>
+{% for member in members %}
+<div class="row">
+  <div class="col-md-3">
+            <div class="member">
+              <img src="{{ member.profile_pic.url }}" class="img-fluid" style="width: 250px; height: 250px;" alt="">
+            <hr>  
+</div></div>
+<div class="col-md-6">
+	<div class="member-info">
+            <div class="member-info-content" style="">
+                  <h3>{{ member.name }}</h3>
+                  <h5>{{ member.post }}</h5>
+                  <div class="social"><h5>Social links:
+                    <a href="{{ member.github }}"><i class="fa fa-github"></i></a>
+                    <a href="{{ member.facebook }}"><i class="fa fa-facebook"></i></a>
+                    <a href="{{ member.linkedin }}"><i class="fa fa-linkedin"></i></a>
+                  </h5></div>
+                </div>
+              </div>
+            </div><hr>
+</div>
+{% endfor %}
+    <!--    <div class="row">
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp">
+            <div class="member">
+              <img src="{% static 'img/team-1.jpg' %}" class="img-fluid" style="width: 250px; height: 250px;" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Arsh Goyal</h4>
+                  <span>DSC Lead</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-github"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="member">
+              <img src="{% static 'img/team-2.jpg' %}" class="img-fluid" style="width: 250px; height: 250px;" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Aditi</h4>
+                  <span>Product Manager</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-github"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="member">
+              <img src="{% static 'img/team-3.jpg' %}" class="img-fluid" style="width: 250px; height: 250px;" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>William Anderson</h4>
+                  <span>CTO</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-github"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="{% static 'img/team-4.jpg' %}" class="img-fluid" style="width: 250px; height: 250px;" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Amanda Jepson</h4>
+                  <span>Accountant</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-github"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+</div>
+-->
+
+{% endblock content %}

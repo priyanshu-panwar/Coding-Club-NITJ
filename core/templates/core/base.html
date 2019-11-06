@@ -10,7 +10,7 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/dsc.png' %}" rel="icon">
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -123,10 +123,10 @@
           <li><a href="{% url 'authenticate:login' %}">Login</a></li>
           <li><a href="{% url 'authenticate:register' %}">Register</a></li>
           {% endif %}
-          <li><a href="#about">Why DSC?</a></li>
-          <li><a href="#services">Features</a></li>
+          <li><a href="{% url 'core:events' %}">Events</a></li>
+          <li><a href="{% url 'core:dsc' %}">DSC</a></li>
           <!--li><a href="#portfolio">Portfolio</a></li-->
-          <li><a href="#team">Team</a></li>
+          <li><a href="{% url 'core:team' %}">Team</a></li>
           <!--li class="drop-down"><a href="">Drop Down</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -171,13 +171,13 @@
                 <div class="col-sm-6">
 
                   <div class="footer-info">
-                    <h3>Rapid</h3>
-                    <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+                    <h3>NITJ</h3>
+                    <p>The National Institute of Technology is autonomous public institute of higher education in India. They are governed by Ministry of Human Resources and Development.</p>
                   </div>
 
                   <div class="footer-newsletter">
                     <h4>Our Newsletter</h4>
-                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem.</p>
+                    <p>Stay tuned with the latest updates from us right inside your inbox. Just drop in your Email Address.</p>
                     <form action="{% url 'core:subscribe' %}" method="post">
                       {% csrf_token %}
                        {% block u_formcontent %} {% endblock u_formcontent %}
@@ -190,11 +190,11 @@
                   <div class="footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">About us</a></li>
-                      <li><a href="#">Services</a></li>
-                      <li><a href="#">Terms of service</a></li>
-                      <li><a href="#">Privacy policy</a></li>
+                      <li><a href="#header">Home</a></li>
+                      <li><a href="{% url 'meeting:index' %}">Gather Meeting</a></li>
+                      <li><a href="{% url 'startup:home' %}">Ideas</a></li>
+                      <li><a href="{% url 'codearena:home' %}">CodeArena</a></li>
+                      <li><a href="{% url 'blog:home' %">Blog</a></li>
                     </ul>
                   </div>
 
@@ -202,11 +202,11 @@
                     <h4>Contact Us</h4>
                     <p>
 
-                      A108 Adam Street <br>
-                      New York, NY 535022<br>
-                      United States <br>
-                      <strong>Phone:</strong> +1 5589 55488 55<br>
-                      <strong>Email:</strong> info@example.com<br>
+                      Arsh Goyal <br>
+                      Head, Coding Club<br>
+                      <br>
+                      <strong>Phone:</strong> +919914047037<br>
+                      <strong>Email:</strong> codingclub@nitj.ac.in<br>
                     </p>
                   </div>
 
@@ -278,8 +278,8 @@
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Rapid
         -->
-        Developed by <a href="https://linktr.ee/_priyanshu_panwar">Priyanshu Panwar</a> 
-    </div>
+        Developed by <a href="https://linktr.ee/_priyanshu_panwar">Priyanshu Panwar</a>|<a href="https://linktr.ee/pulkit_065">Pulkit Bhagat</a>
+            </div>
   </footer><!-- #footer -->
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
@@ -327,3 +327,4 @@ $(document).ready(function(){
 
 </body>
 </html>
+  

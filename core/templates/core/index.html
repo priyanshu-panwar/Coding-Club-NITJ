@@ -9,6 +9,7 @@
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center">
         <div class="col-md-6 intro-info order-md-first order-last" >
+          <!--<img src="{% static 'img/codingclub.png' %}" style="height: 150px; width: 400px;">-->
           <h2>Join Us <br>for Creating a <span>Better Tomorrow!</span></h2>
           {% if user.is_authenticated %}
           
@@ -31,12 +32,17 @@
           <div class="">
             <a href="{% url 'codearena:home' %}" class="btn-get-started"style="background-color: #FBBC04;" >Code Arena <i class="fa fa-code"></i></a> 
           </div>
+          <div class="">
+            <a href="{% url 'blog:home' %}" class="btn-get-started"style="background-color: light-green;" >Blog <i class="fa fa-code"></i></a> 
+          </div>
         </div>
         
          
   
         <div class="col-md-6 intro-img order-md-last order-first">
-          <img src="{% static 'img/dsc.png' %}"  alt="" class="img-fluid">
+          <img src="{% static 'img/logodsc.png' %}"  alt="" class="img-fluid">
+        
+          <img src="{% static 'img/codingclub.png' %}" style="height: 150px; width: 350px;">
         </div>
       </div>
 
@@ -55,15 +61,15 @@
 
           <div class="col-lg-5 col-md-6">
             <div class="about-img">
-              <img src="img/whydsc.jpg" alt="">
+              <img src="{% static 'img/logodsc.png' %}" alt="">
             </div>
           </div>
 
           <div class="col-lg-7 col-md-6">
             <div class="about-content">
-              <h2>Why DSC?</h2>
+              <h2>About Us</h2>
               
-              <p>A Developer Students Club is a globally recognized student body which helps students to have the opportunity to not only learn development skills, but it also acts as a medium to apply them to real life problems by finding solutions, and then showcasing their work within their communities.By developing solutions for local businesses/organizations, the talented college students can now help the local community and have a hands-on experience for building real world applications.</p>
+              <p>Coding Club NITJ is a globally recognized student body which helps students to have the opportunity to not only learn development skills, but it also acts as a medium to apply them to real life problems by finding solutions, and then showcasing their work within their communities.By developing solutions for local businesses/organizations, the talented college students can now help the local community and have a hands-on experience for building real world applications.</p>
               
               
             </div>
@@ -82,7 +88,7 @@
 
         <header class="section-header">
           <h3>Features</h3>
-          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+          <p>Coding Club not only organises events, but also teaches you to code.</p>
         </header>
 
         <div class="row">
@@ -90,48 +96,26 @@
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
             <div class="box">
               <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <h4 class="title"><a href="{% url 'codearena:home' %}">Code</a></h4>
+              <p class="description">We help you learn to code, and grow as a developer.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
             <div class="box">
               <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <h4 class="title"><a href="{% url 'core:events' %}">Events</a></h4>
+              <p class="description">We teach you how to use different Google technologies to create your next big project!</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
             <div class="box">
               <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <h4 class="title"><a href="{% url 'core:dsc' %}">DSC Events</a></h4>
+              <p class="description">Full-day of workshops, hands-on experience, hacking and debugging. Come and tame your favourite technology!</p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-            <div class="box">
-              <div class="icon" style="background: #eafde7;"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
-            <div class="box">
-              <div class="icon" style="background: #e1eeff;"><i class="ion-ios-world-outline" style="color: #2282ff;"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
-            <div class="box">
-              <div class="icon" style="background: #ecebff;"><i class="ion-ios-clock-outline" style="color: #8660fe;"></i></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-          </div>
-
+          
         </div>
 
       </div>
@@ -144,50 +128,11 @@
       <div class="container-fluid">
         
         <header class="section-header">
-          <h3>Why choose us?</h3>
-          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
-        </header>
+          </header>
 
         <div class="row">
 
-          <div class="col-lg-6">
-            <div class="why-us-img">
-              <img src="img/why-us.jpg" alt="" class="img-fluid">
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="why-us-content">
-              <p>Molestiae omnis numquam corrupti omnis itaque. Voluptatum quidem impedit. Odio dolorum exercitationem est error omnis repudiandae ad dolorum sit.</p>
-              <p>
-                Explicabo repellendus quia labore. Non optio quo ea ut ratione et quaerat. Porro facilis deleniti porro consequatur
-                et temporibus. Labore est odio.
-
-                Odio omnis saepe qui. Veniam eaque ipsum. Ea quia voluptatum quis explicabo sed nihil repellat..
-              </p>
-
-              <!--div class="features wow bounceInUp clearfix">
-                <i class="fa fa-diamond" style="color: #f058dc;"></i>
-                <h4>Corporis dolorem</h4>
-                <p>Commodi quia voluptatum. Est cupiditate voluptas quaerat officiis ex alias dignissimos et ipsum. Soluta at enim modi ut incidunt dolor et.</p>
-              </div>
-
-              <div class="features wow bounceInUp clearfix">
-                <i class="fa fa-object-group" style="color: #ffb774;"></i>
-                <h4>Eum ut aspernatur</h4>
-                <p>Molestias eius rerum iusto voluptas et ab cupiditate aut enim. Assumenda animi occaecati. Quo dolore fuga quasi autem aliquid ipsum odit. Perferendis doloremque iure nulla aut.</p>
-              </div>
-              
-              <div class="features wow bounceInUp clearfix">
-                <i class="fa fa-language" style="color: #589af1;"></i>
-                <h4>Voluptates dolores</h4>
-                <p>Voluptates nihil et quis omnis et eaque omnis sint aut. Ducimus dolorum aspernatur. Totam dolores ut enim ullam voluptas distinctio aut.</p>
-              </div-->
-              
-            </div>
-
-          </div>
-
+          
         </div>
 
       </div>
@@ -196,23 +141,23 @@
         <div class="row counters">
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">274</span>
-            <p>Clients</p>
+            <span data-toggle="counter-up">2075</span>
+            <p>Students Impacted</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">421</span>
-            <p>Projects</p>
+            <span data-toggle="counter-up">10</span>
+            <p>Offline Events</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">1,364</span>
-            <p>Hours Of Support</p>
+            <span data-toggle="counter-up">10</span>
+            <p>Workshops</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">18</span>
-            <p>Hard Workers</p>
+            <span data-toggle="counter-up">15</span>
+            <p>Team Members</p>
           </div>
   
         </div>
@@ -227,11 +172,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-9 text-center text-lg-left">
-            <h3 class="cta-title">Call To Action</h3>
-            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3 class="cta-title">Gather A Meeting</h3>
+            <p class="cta-text">If you any have problem or doubt and need help from any senior, or any guidance. Add your Question on our Portal</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+            <a class="cta-btn align-middle" href="{% url 'meeting:index' %}">Gather A Meeting</a>
           </div>
         </div>
 
@@ -285,7 +230,7 @@
     <!--==========================
       Portfolio Section
     ============================-->
-    <section id="portfolio" class="section-bg">
+    <!--<section id="portfolio" class="section-bg">
       <div class="container">
 
         <header class="section-header">
@@ -296,9 +241,9 @@
           <div class="col-lg-12">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-app">Team</li>
+              <li data-filter=".filter-card">Events</li>
+              <li data-filter=".filter-web">Workshops</li>
             </ul>
           </div>
         </div>
@@ -307,12 +252,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/app1.jpg" class="img-fluid" alt="">
+              <img src="{% static 'img/portfolio/app1.jpg' %}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">App 1</a></h4>
                 <p>App</p>
                 <div>
-                  <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{% static 'img/portfolio/app1.jpg' %}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -321,12 +266,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/web3.jpg" class="img-fluid" alt="">
+              <img src="{% static 'img/portfolio/web3.jpg' %}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Web 3</a></h4>
                 <p>Web</p>
                 <div>
-                  <a href="img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{% static 'img/portfolio/web3.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -335,12 +280,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/app2.jpg" class="img-fluid" alt="">
+              <img src="{% static 'img/portfolio/app2.jpg' %}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">App 2</a></h4>
                 <p>App</p>
                 <div>
-                  <a href="img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{% static 'img/portfolio/app2.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -349,12 +294,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/card2.jpg" class="img-fluid" alt="">
+              <img src="{% static 'img/portfolio/card2.jpg' %}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Card 2</a></h4>
                 <p>Card</p>
                 <div>
-                  <a href="img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{% static 'img/portfolio/card2.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -363,12 +308,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/web2.jpg" class="img-fluid" alt="">
+              <img src="{% static 'img/portfolio/web2.jpg' %}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Web 2</a></h4>
                 <p>Web</p>
                 <div>
-                  <a href="img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{% static 'img/portfolio/web2.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -377,12 +322,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/app3.jpg" class="img-fluid" alt="">
+              <img src="{% static 'img/portfolio/app3.jpg' %}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">App 3</a></h4>
                 <p>App</p>
                 <div>
-                  <a href="img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{% static 'img/portfolio/app3.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -391,12 +336,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/card1.jpg" class="img-fluid" alt="">
+              <img src="{% static 'img/portfolio/card1.jpg' %}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Card 1</a></h4>
                 <p>Card</p>
                 <div>
-                  <a href="img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{% static 'img/portfolio/card1.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -405,12 +350,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/card3.jpg" class="img-fluid" alt="">
+              <img src="{% static 'img/portfolio/card3.jpg' %}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Card 3</a></h4>
                 <p>Card</p>
                 <div>
-                  <a href="img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{% static 'img/portfolio/card3.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -419,12 +364,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/web1.jpg" class="img-fluid" alt="">
+              <img src="{% static 'img/portfolio/web1.jpg' %}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Web 1</a></h4>
                 <p>Web</p>
                 <div>
-                  <a href="img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{% static 'img/portfolio/web1.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -434,7 +379,7 @@
         </div>
 
       </div>
-    </section><!-- #portfolio -->
+    </section>--><!-- #portfolio -->
 
     <!--==========================
       Clients Section
@@ -495,43 +440,82 @@
 
       </div>
     </section--><!-- #testimonials -->
+<section id="team" class="section-bg">
+      <div class="container">
+        <div class="section-header">
+          <h3>Our Patrons</h3>
+          <p>Patrons who have made this all possible.</p>
+        </div>
+<div class="row">
+  <div class="col" style="">
+  <div class="card" style="width: 18rem;">
+  <img src="{% static 'img/director.jpg' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">Prof Lalit Kumar Awasthi</h4>
+    <h5>Director, NIT Jalandhar</h5>
+    <p class="card-text">To become a leading and unique institution of higher learning, research and training in engineering and technology for students ...
+
+</p>
+   
+  </div>
+</div>
+</div>
+<div class="col" style="text-align: center;">
+  <div class="card" style="width: 18rem;">
+  <img src="{% static 'img/faculty.jpeg' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    
+    <h4 class="card-title">Indu Saini Mam</h4>
+    <h5>Professor, NIT Jalandhar</h5>
+    <p class="card-text">To become a leading and unique institution of higher learning, research and training in engineering and technology for students ...
+
+</p>
+  </div>
+</div>
+</div>
+</div>
+
+</section>
 
     <!--==========================
       Team Section
     ============================-->
-    <section id="team" class="section-bg">
+   <!-- <section id="team" class="section-bg">
       <div class="container">
         <div class="section-header">
-          <h3>Team</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <h3>Our Patrons</h3>
+          <p>Our Patrons who have made all this possible.</p>
         </div>
 
         <div class="row">
 
           <div class="col-lg-3 col-md-6 wow fadeInUp">
             <div class="member">
-              <img src="img/team-1.jpg" class="img-fluid" alt="">
+              <img src="{% static 'img/director.jpg' %}" class="img-fluid" style="width: 250px; height: 250px;" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
+                  <h4>Prof Lalit Kumar Awasthi</h4>
+                  <span>Director, NIT Jalandhar</span>
                   <div class="social">
-                    <a href=""><i class="fa fa-github"></i></a>
+  <a href=""><i class="fa fa-github"></i></a>
                     <a href=""><i class="fa fa-facebook"></i></a>
                     <a href=""><i class="fa fa-google-plus"></i></a>
                     <a href=""><i class="fa fa-linkedin"></i></a>
+                    
                   </div>
+
                 </div>
               </div>
+              <p>To become a leading and unique institution of higher learning, research and training in engineering and technology for students ...</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member">
-              <img src="img/team-2.jpg" class="img-fluid" alt="">
+              <img src="{% static 'img/team-2.jpg' %}" class="img-fluid" style="width: 250px; height: 250px;" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Sarah Jhonson</h4>
+                  <h4>Aditi</h4>
                   <span>Product Manager</span>
                   <div class="social">
                     <a href=""><i class="fa fa-github"></i></a>
@@ -546,7 +530,7 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="img/team-3.jpg" class="img-fluid" alt="">
+              <img src="{% static 'img/team-3.jpg' %}" class="img-fluid" style="width: 250px; height: 250px;" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>William Anderson</h4>
@@ -564,7 +548,7 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="member">
-              <img src="img/team-4.jpg" class="img-fluid" alt="">
+              <img src="{% static 'img/team-4.jpg' %}" class="img-fluid" style="width: 250px; height: 250px;" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Amanda Jepson</h4>
@@ -581,10 +565,19 @@
           </div>
 
         </div>
+        <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
 
       </div>
-    </section><!-- #team -->
 
+    </section>
+-->
     <!--==========================
       Clients Section
     ============================-->
@@ -676,19 +669,57 @@
     <!--==========================
       Frequently Asked Questions Section
     ============================-->
-    <section id="faq"><!--Remember Recent blogs for us-->
+   <!-- <section id="faq">Remember Recent blogs for us
       <div class="container">
         <header class="section-header">
           <h3>Recent Blogs</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <p>Take a look at our latest posts.</p>
         </header>
-<!--3 cards for recent blogs-->
+
+3 cards for recent blogs
          
         </div>
     </section>
 
       </div>
-    </section><!-- #faq -->
+    </section>-->
+    <!--<section id="services" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Recent Posts</h3>
+          <p>Take a look at our latest posts.</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="">Recent Posts</a></h4>
+              <p class="description">We help you learn to code, and grow as a developer.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+              <h4 class="title"><a href="">Events</a></h4>
+              <p class="description">We teach you how to use different Google technologies to create your next big project!</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="">Workshops</a></h4>
+              <p class="description">Full-day of workshops, hands-on experience, hacking and debugging. Come and tame your favourite technology!</p>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>-->
 
     <section id="clients" class="wow fadeInUp">
       <div class="container">
@@ -698,14 +729,14 @@
         </header>
 
         <div class="owl-carousel clients-carousel">
-          <img src="img/clients/client-1.png" alt="">
-          <img src="img/clients/client-2.png" alt="">
-          <img src="img/clients/client-3.png" alt="">
-          <img src="img/clients/client-4.png" alt="">
-          <img src="img/clients/client-5.png" alt="">
-          <img src="img/clients/client-6.png" alt="">
-          <img src="img/clients/client-7.png" alt="">
-          <img src="img/clients/client-8.png" alt="">
+          <img src="{% static 'img/clients/client-1.png' %}" alt="">
+          <img src="{% static 'img/clients/client-2.png' %}" alt="">
+          <img src="{% static 'img/clients/client-3.png' %}" alt="">
+          <img src="{% static 'img/clients/client-4.png' %}" alt="">
+          <img src="{% static 'img/clients/client-5.png' %}" alt="">
+          <img src="{% static 'img/clients/client-6.png' %}" alt="">
+          <img src="{% static 'img/clients/client-7.png' %}" alt="">
+          <img src="{% static 'img/clients/client-8.png' %}" alt="">
         </div>
 
       </div>

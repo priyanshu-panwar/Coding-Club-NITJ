@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container" style="padding-top: 150px;">
+
+<h1>Events</h1>
+{% for member in events_done %}
+<div class="row">
+  <div class="col-md-6">
+            <div class="member">
+              <img src="{{ member.image.url }}" class="img-fluid" style="width: 3500px; height: 450px;" alt="">
+            <hr>  
+</div></div>
+<div class="col-md-6">
+	<div class="member-info">
+            <div class="member-info-content" style="">
+                  <h3>{{ member.name }}</h3>
+                  <h5>{{ member.description }}</h5>
+                </div>
+              </div>
+            </div><hr>
+</div>
+{% endfor %}
+{% endblock content %}

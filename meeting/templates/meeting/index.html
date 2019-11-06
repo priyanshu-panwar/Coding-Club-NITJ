@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container" style="padding-top: 150px;">
+<h1>Gather A Meeting</h1>
+<h2>Select Your Question and vote</h2>
+<h5><button><a href="{% url 'meeting:add' %}">Add a Meeting Poll</a></button></h5>
+
+    {% if latest_question_list %}
+    <ul>
+        {% for question in latest_question_list %}
+        <li>
+            <a href="{% url 'meeting:detail' question.id %}"> {{ question.topic }}</a>
+            <p class="text-muted">{{ question.question_text }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No Polls are available.</p>
+    {% endif %}
+</div>
+{% endblock %}

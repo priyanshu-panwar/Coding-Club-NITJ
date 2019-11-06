@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}<title>Results - Polls</title>{% endblock %}
+{% block content %}
+<div class="container" style="padding-top: 150px;">
+
+<h1> {{ question.topic }} </h1>
+<h2> {{ question.question_text }} </h2>
+
+<h5>No. of Hits: {{ question.hits }}</h5>
+
+<h5><a href = "{% url 'meeting:index' %}"> Home </a></h5>
+</div>
+{% endblock %}

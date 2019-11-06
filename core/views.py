@@ -1,7 +1,19 @@
 from django.shortcuts import render
-from .models import Contact
+from .models import Contact, TeamMember, Event
 from .forms import ContactForm, SubscriptionForm
 from newsletter.models import NewsletterUsers
+
+def dsc(request):
+	return render(request, 'core/dsc.html')
+
+def events(request):
+	events_done = Event.objects.all()
+	return render(request, 'core/events.html', {'events_done': events_done,})
+
+
+def team(request):
+	members = TeamMember.objects.all()
+	return render(request, 'core/team.html', {'members': members,})
 
 def home(request):
 	form = ContactForm()

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'blog',
     'startup',
     'codearena',
+    'meeting',
 
     'social_django',
     'pagedown.apps.PagedownConfig',
